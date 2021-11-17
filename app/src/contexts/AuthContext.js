@@ -8,21 +8,21 @@ export const useAuth  = () => useContext(AuthContext); // direct export
 
 export const AuthProvider = ({children}) => {
     const [loading, setLoading] = useState(true)
-    const [user, setUser] = useState({});
+    const [user, setUser] = useState(null);
     const history = useHistory();
 
     useEffect(()=>{
         auth.onAuthStateChanged((user)=>{
             setUser(user);
             setLoading(false);
-            history.push('/chats')
+            if(user) history.push('/chats')
         })
     },[user,history])
 
     const value = {user};
 
     return (
-        <AuthContext.Provider>
+        <AuthContext.Provider value={value}>
             {!loading && children}
         </AuthContext.Provider>)
 }
