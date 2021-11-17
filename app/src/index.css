@@ -47,7 +47,7 @@
 /* Login Page */
 
 #login-page {
-  background-image: linear-gradient(#40a9ff, #096dd9);
+  background-image: linear-gradient(#243b55 , #141e30);
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -76,11 +76,11 @@
 }
 
 .facebook {
-  background-color: #3b5998;
+  background-color: #141e30;
 }
 
 .google {
-  background-color: #4285f4;
+  background-color: #243b55;
   color: white;
 }
 
@@ -96,6 +96,6 @@
 #loading-icon {
   font-size: 66px;
   position: relative;
-  left: calc(50vw - 33px);
+  left: calc(50vw - 22px);
   top: calc(50vh - 22px);
 }
